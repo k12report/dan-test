@@ -1,0 +1,32 @@
+{
+  "AWSTemplateFormatVersion" : "2010-09-09",
+
+  "Description" : "dan-test S3 bucket",
+
+  "Parameters" : {
+    "BucketName": {
+      "Description": "Name of S3 bucket",
+      "Default": "dan-test-bucket",
+      "Type": "String",
+      "ConstraintDescription": "must be a valid string."
+    }
+  },
+
+  "Resources" : {
+    "S3Bucket" : {
+      "Type" : "AWS::S3::Bucket",
+      "Properties" : {
+        "BucketName" : {"Ref" : "BucketName"}
+      }
+    }
+  }
+
+"Outputs" : {
+  "BUCKET_NAME" : {
+    "Description": "The bucket name",  
+    "Value" : { "Ref" : "BucketName" }
+  }
+}
+
+}
+
