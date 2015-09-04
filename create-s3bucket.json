@@ -6,7 +6,7 @@
   "Parameters" : {
     "BucketName": {
       "Description": "Name of S3 bucket",
-      "Default": "dan-test-bucket",
+      "Default": "dan-test-bucket01",
       "Type": "String",
       "ConstraintDescription": "must be a valid string."
     }
@@ -19,10 +19,10 @@
         "BucketName" : {"Ref" : "BucketName"}
       }
     }
-  }
+  },	
 
 "Outputs" : {
-  "BUCKET_NAME" : {
+  "BUCKETNAME" : {
     "Description": "The bucket name",  
     "Value" : { "Ref" : "BucketName" }
   }
